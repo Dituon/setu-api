@@ -225,11 +225,12 @@ function searchImage(string $tag, int $r, bool $r18 = false, string $searchMode 
 
     $imgTitle = $ru['body']['illustManga']['data'][$r]['title'];
     $imgTags = $ru['body']['illustManga']['data'][$r]['tags'];
+    $arr = defaultArray();
+
     if ($imgTags[0] === 'R-18' || $imgTags[0] === 'R-18G') {
         $arr['r18'] = $imgTags[0];
     }
     settype($imgPid, "string");
-    $arr = defaultArray();
     $arr['type'] = 'image';
     $arr['pid'] = $imgPid;
     $arr['url'] = 'https://www.pixiv.net/artworks/' . $imgPid;
@@ -396,9 +397,6 @@ function searchImageByImage(string $url)
 function printJSON(array $arr)
 {
     @header('content-type: application/json');
-    foreach ($arr as $value) {
-        $arr[$value] = $arr[$value] ?? 'null';
-    }
     echo(json_encode($arr));
 }
 
@@ -422,5 +420,5 @@ function printImage(string $url)
  */
 function defaultArray(): array
 {
-    return array_fill_keys(array('type', 'pid', 'url', 'r18', 'title', 'page', 'caption', 'content'), 'null');
+    return array_fill_keys(array('type', 'pid', 'url', 'r18', 'title', 'page', 'caption', 'content'), '');
 }
