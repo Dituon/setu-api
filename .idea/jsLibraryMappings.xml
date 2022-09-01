@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{jquery-2.1.1}" />
-    <file url="file://$PROJECT_DIR$/../todayHistoryWorker" libraries="{FileSaver, fabric.js, jquery-2.0.0, jquery-2.1.1, jquery-3.6.0.slim, jszip, libgif, require}" />
-    <file url="file://$USER_HOME$/Documents/GitHub/petpet/editor" libraries="{jquery-2.1.1}" />
-    <file url="PROJECT" libraries="{FileSaver, fabric.js, jquery, jszip, libgif}" />
-  </component>
-</project>
