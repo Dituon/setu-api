@@ -23,11 +23,11 @@ function sendRequest(string $url): string
 /**
  * 打印指定pid插图
  *
- * @param $id int pid
+ * @param string $id int pid
  * @param $page int 页数, 默认为第1页
  * @return void
  */
-function printImageByPid(int $id, int $page = 1)
+function printImageByPid(string $id, int $page = 1)
 {
     $url = "https://www.pixiv.net/ajax/illust/$id/pages";
     $response = sendRequest($url);

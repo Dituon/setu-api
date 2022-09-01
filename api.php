@@ -17,16 +17,16 @@ switch ($_GET['type']) {
         printNovel($_GET['pid'], $_GET['page']);
         break;
     case "ranking_img":
-        getRankingImage($_GET['r']);
+        getRankingImage((int) $_GET['r']);
         break;
     case "random_img":
         printRandomImage($_GET['tag'], $r18);
         break;
     case "search_img":
-        searchImage($_GET['tag'], $_GET['r'], $r18, $_GET['mode']);
+        searchImage($_GET['tag'],(int) $_GET['r'], $r18, (string) $_GET['mode']);
         break;
     case "search_novel":
-        searchNovel($_GET['tag'], $_GET['r'], $r18, $_GET['mode']);
+        searchNovel($_GET['tag'],(int) $_GET['r'], $r18, (string) $_GET['mode']);
         break;
     case "random_voice":
         getVoice($_GET['tag']);
