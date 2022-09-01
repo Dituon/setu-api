@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="beb2b9e3-813c-4dbb-8cb8-e0bf55c95b3b" name="lo" url="http://23.105.215.187">
+        <fileTransfer host="23.105.215.187" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="12d8d26c-c77e-49d4-a7e9-53c605cd4e68" name="local">
+        <fileTransfer accessType="LOCAL" port="0">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
