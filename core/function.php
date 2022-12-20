@@ -83,7 +83,8 @@ function getRankingImage(int $num)
 
     $matches = array();
     $json = json_decode(
-        sendRequest('https://www.pixiv.net/ranking.php?mode=daily&content=illust&p=1&format=json'), true
+        sendRequest('https://www.pixiv.net/ranking.php?mode=daily&content=illust&p=1&format=json'),
+    true
     )["contents"];
 
     foreach ($json as $value) {
@@ -114,13 +115,13 @@ function searchNovel(string $tag, int $r, bool $r18 = false, string $searchMode 
             $order = 'popular_male_d';
             $blt = '';
             break;
-        case '2' :
-        case 'enhanced' :
+        case '2':
+        case 'enhanced':
             $order = 'date_d';
             $blt = '1';
             break;
-        case '0' :
-        case 'default' :
+        case '0':
+        case 'default':
         default:
             $order = 'date_d';
             $blt = '50';
@@ -202,13 +203,13 @@ function searchImage(string $tag, int $r, bool $r18 = false, string $searchMode 
             $order = 'popular_male_d';
             $blt = '';
             break;
-        case '2' :
-        case 'enhanced' :
+        case '2':
+        case 'enhanced':
             $order = 'date_d';
             $blt = '100';
             break;
-        case '0' :
-        case 'default' :
+        case '0':
+        case 'default':
         default:
             $order = 'date_d';
             $blt = '2000';
@@ -371,7 +372,7 @@ function searchImageByImage(string $url)
             if (isset($est_time)) {
                 $arr['caption'] .= substr($est_time, 0, strpos($est_time, ' /'));
             }
-//            $url = "https://api.jikan.moe/v4/anime/" . $json['results'][0]['data']['mal_id'];
+            //            $url = "https://api.jikan.moe/v4/anime/" . $json['results'][0]['data']['mal_id'];
 //            $json = json_decode(file_get_contents($url, false, stream_context_create($stream_opts)), true);
         }
     } else { //trace.moe
@@ -397,7 +398,7 @@ function searchImageByImage(string $url)
 function printJSON(array $arr)
 {
     @header('content-type: application/json');
-    echo(json_encode($arr));
+    echo (json_encode($arr));
 }
 
 /**
@@ -410,7 +411,7 @@ function printImage(string $url)
 {
     $ImageData = sendRequest($url);
     @header('content-type: image/jpeg');
-    echo($ImageData);
+    echo ($ImageData);
 }
 
 /**
